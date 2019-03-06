@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Mvc;
+using AutoMapper;
+using StackoverflowServer.Dtos;
 using StackoverflowServer.Models;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
@@ -21,35 +23,40 @@ namespace StackoverflowServer.Controllers.api
             _context = new ApplicationDbContext();
         }
 
-        public IEnumerable<Question> GetQuestions()
+        [System.Web.Http.Route("api/GetQuestions")]
+        public IEnumerable<QuestionDto> GetQuestions()
         {
-            return _context.Questions.ToList();
+            return _context.Questions.ToList().Select(Mapper.Map<Question, QuestionDto>);
         }
 
-        public Question GetQuestion(long id)
+        [System.Web.Http.Route("api/GetQuestion/{id}")]
+        public IHttpActionResult GetQuestion(long id)
         {
             Question questionInDb = _context.Questions.SingleOrDefault(q => q.Id == id);
 
-            if(questionInDb == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+            if (questionInDb == null)
+                return NotFound();
 
-            return questionInDb;
+            return Ok(Mapper.Map<Question, QuestionDto>(questionInDb));
         }
 
         [HttpPost]
-        public Question CreateQuestion(Question question)
+        [System.Web.Http.Route("api/CreateQuestion")]
+        public IHttpActionResult CreateQuestion(QuestionDto questionDto)
         {
-            if(!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            if (!ModelState.IsValid)
+                return BadRequest();
 
+            var question = Mapper.Map<QuestionDto, Question>(questionDto);
             _context.Questions.Add(question);
             _context.SaveChanges();
 
-            return question;
+            return Created(new Uri(Request.RequestUri + "/" + question.Id), question);
         }
 
         [HttpPut]
-        public void UpdateQuestion(Question question, long id)
+        [System.Web.Http.Route("api/UpdateQuestion/{id}")]
+        public void UpdateQuestion(QuestionDto questionDto, long id)
         {
             if(!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -59,12 +66,14 @@ namespace StackoverflowServer.Controllers.api
             if(questionInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            questionInDb.QuestionName = question.QuestionName;
+            //questionInDb.QuestionName = question.QuestionName;
+            Mapper.Map(questionDto, questionInDb);
 
             _context.SaveChanges();
         }
 
         [HttpDelete]
+        [System.Web.Http.Route("api/DeleteQuestion/{id}")]
         public void DeleteQuestion(long id)
         {
             Question questionInDb = _context.Questions.SingleOrDefault(q => q.Id == id);

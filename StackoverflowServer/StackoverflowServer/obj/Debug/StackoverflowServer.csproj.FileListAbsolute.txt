@@ -128,3 +128,8 @@ E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\St
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.pdb
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.InitialCreate.resources
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.csproj.GenerateResource.cache
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\AutoMapper.dll
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\AutoMapper.xml
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Cors.dll
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Http.Cors.dll
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Http.Cors.xml

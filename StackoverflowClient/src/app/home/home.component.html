@@ -1,0 +1,92 @@
+<head>
+  <!--This is for search bar-->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!--This is for button-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="jumbtron">
+    <div class="row">
+      <div class="col-md-12 var-line"></div>
+    </div>
+  <div class="row">
+    <div class="col-md-2"><div class="top-bar"><i class="fas fa-dove"></i>stack<b>overflow</b></div></div>
+    <div class="col-md-8">
+      <!--Search Bar-->
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+              <div class="input-append span12">
+                <input type="text" class="search-query search-box" placeholder="Search...">
+                <button type="submit" class="btn"><i class="icon-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <!--Button-->
+      <button type="button" class="btn btn-link">Log In</button>
+      <button type="button" class="btn btn-primary btn-sign-up">Sign Up</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 blue-box">
+      <div class="text-blue-box">
+        <h2>Learn, Share, Build</h2>
+        <p >Each month, over 50 million developers come to Stack Overflow to learn, share their knowledge, and build their careers.</p>
+        <p>Join the world’s largest developer community.</p>
+      </div>
+    </div>
+    <div class="col-md-6 blue-box">
+      <div>
+        <button type="button" class="btn btn-link btn-google">Google</button>
+        <button type="button" class="btn btn-primary btn-facebook">Facebook</button>
+        <div>
+          <p class="or">OR</p>
+        </div>
+        <form action="">
+          <table>
+            <tr>
+              <td><label for="display_name" class="form-label">Display name</label></td>
+              <td><input type="text" id="display_name" placeholder="j. Doy"></td>
+            </tr>
+            <tr>
+              <td><label for="email_address" class="form-label">Email address</label></td>
+              <td><input type="text" id="email_address" placeholder="you@example.com"></td>
+            </tr>
+            <tr>
+              <td><label for="password" class="form-label">Password</label></td>
+              <td><input type="text" id="password" placeholder="********"></td>
+            </tr>
+          </table>
+          <button type="button" class="btn btn-link btn-sign-up">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 deep-blue-box">
+      <p class="deep-blue-text">Stack Overflow Business Solutions: Looking to understand, engage, or hire developers? <a href="#" class="deep-blue-text">Learn more »</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+      <table class="table table-hover">
+        <tr *ngFor="let qn of service.list">
+          <td>{{qn.QuestionName}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+</body>
