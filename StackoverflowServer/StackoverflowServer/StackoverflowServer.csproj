@@ -262,6 +262,14 @@
     <Compile Include="Migrations\201903071440296_AnswerClassAdded.Designer.cs">
       <DependentUpon>201903071440296_AnswerClassAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903071656310_deleteQuestionId.cs" />
+    <Compile Include="Migrations\201903071656310_deleteQuestionId.Designer.cs">
+      <DependentUpon>201903071656310_deleteQuestionId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903071726316_modifyAnswerClass.cs" />
+    <Compile Include="Migrations\201903071726316_modifyAnswerClass.Designer.cs">
+      <DependentUpon>201903071726316_modifyAnswerClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -373,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903071440296_AnswerClassAdded.resx">
       <DependentUpon>201903071440296_AnswerClassAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903071656310_deleteQuestionId.resx">
+      <DependentUpon>201903071656310_deleteQuestionId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903071726316_modifyAnswerClass.resx">
+      <DependentUpon>201903071726316_modifyAnswerClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

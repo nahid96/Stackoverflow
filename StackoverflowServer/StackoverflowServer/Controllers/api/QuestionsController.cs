@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,6 +12,7 @@ using StackoverflowServer.Models;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
+using System.Data.Entity;
 
 namespace StackoverflowServer.Controllers.api
 {
@@ -27,16 +29,18 @@ namespace StackoverflowServer.Controllers.api
         public IEnumerable<QuestionDto> GetQuestions()
         {
             return _context.Questions.ToList().Select(Mapper.Map<Question, QuestionDto>);
+
+            //return _context.Questions
+            //    .Include(q => q.Answers.Select(a => a.AnswerTitle)).ToList().Select(Mapper.Map<Question, QuestionDto>);
         }
 
         [System.Web.Http.Route("api/GetQuestion/{id}")]
         public IHttpActionResult GetQuestion(long id)
         {
-            //Question questionInDb = _context.Questions.SingleOrDefault(q => q.Id == id);
+            //Question questionInDb = _context.Questions.FirstOrDefault(q => q.Id == id);
 
-            var questionInDb = (from a in _context.Questions
-                join c in _context.Answers on a.Id equals c.QuestionId
-                select new { Question = a, Answer = c });
+            var questionInDb = _context.Questions.Include(a => a.Answers.Select(b => b.AnswerTitle))
+                .Where(q => q.Id == id).FirstOrDefault();
 
             if (questionInDb == null)
                 return NotFound();

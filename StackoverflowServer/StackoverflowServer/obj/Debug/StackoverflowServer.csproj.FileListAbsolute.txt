@@ -135,3 +135,5 @@ E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.W
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Http.Cors.xml
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.QuestionDetailAddedToQuestionModel.resources
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.AnswerClassAdded.resources
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.deleteQuestionId.resources
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.modifyAnswerClass.resources

@@ -11,6 +11,8 @@ namespace StackoverflowServer.Models
 
         public string AnswerTitle { get; set; }
 
+        public Question Question { get; set; }
+
         public long QuestionId { get; set; }
     }
 }

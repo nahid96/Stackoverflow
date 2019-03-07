@@ -30,9 +30,9 @@ namespace StackoverflowServer.Migrations
                 );
 
             context.Answers.AddOrUpdate(x => x.Id,
-                new Answer() { Id = 1, AnswerTitle = "You can use fontColor inside ticks/label/legend:labels for a particular axis,", QuestionId = 1},
+                new Answer() { Id = 1, AnswerTitle = "You can use fontColor inside ticks/label/legend:labels for a particular axis,", QuestionId = 1 },
                 new Answer() { Id = 2, AnswerTitle = "if we set the options as below then the font color of axes label values changes. For example I tried it on jsfiddle and it worked. The same also worked for my chart in rails app. ...", QuestionId = 1},
-                new Answer() { Id = 3, AnswerTitle = "I want to change them by adding the same word to each column like this x_trial 1 x_trial2 x_trial3 x_trial 4", QuestionId = 2}
+                new Answer() { Id = 3, AnswerTitle = "I want to change them by adding the same word to each column like this x_trial 1 x_trial2 x_trial3 x_trial 4", QuestionId = 2 }
 
                 );
         }
