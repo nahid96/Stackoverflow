@@ -254,9 +254,18 @@
     <Compile Include="Migrations\201902250611012_InitialCreate.Designer.cs">
       <DependentUpon>201902250611012_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903071340296_QuestionDetailAddedToQuestionModel.cs" />
+    <Compile Include="Migrations\201903071340296_QuestionDetailAddedToQuestionModel.Designer.cs">
+      <DependentUpon>201903071340296_QuestionDetailAddedToQuestionModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903071440296_AnswerClassAdded.cs" />
+    <Compile Include="Migrations\201903071440296_AnswerClassAdded.Designer.cs">
+      <DependentUpon>201903071440296_AnswerClassAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -358,6 +367,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902250611012_InitialCreate.resx">
       <DependentUpon>201902250611012_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903071340296_QuestionDetailAddedToQuestionModel.resx">
+      <DependentUpon>201903071340296_QuestionDetailAddedToQuestionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903071440296_AnswerClassAdded.resx">
+      <DependentUpon>201903071440296_AnswerClassAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

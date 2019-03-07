@@ -133,3 +133,5 @@ E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\AutoMapp
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Cors.dll
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Http.Cors.dll
 E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\bin\System.Web.Http.Cors.xml
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.QuestionDetailAddedToQuestionModel.resources
+E:\headblocks\Stackoverflow\StackoverflowServer\StackoverflowServer\obj\Debug\StackoverflowServer.Migrations.AnswerClassAdded.resources
