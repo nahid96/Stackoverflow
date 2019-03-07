@@ -27,6 +27,8 @@ namespace StackoverflowServer.Models
         }
 
         public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        
         
         public static ApplicationDbContext Create()
         {

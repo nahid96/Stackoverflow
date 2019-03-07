@@ -1,15 +1,4 @@
-<head>
-  <!--This is for search bar-->
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!--This is for button-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+
   <div class="jumbtron">
     <div class="row">
       <div class="col-md-12 var-line"></div>
@@ -82,11 +71,10 @@
     <div class="col-md-8">
       <table class="table table-hover">
         <tr *ngFor="let qn of service.list">
-          <td>{{qn.QuestionName}}</td>
+          <td style="cursor: pointer;">{{qn.QuestionName}}</td>
         </tr>
       </table>
     </div>
     <div class="col-md-3"></div>
 </div>
 </div>
-</body>

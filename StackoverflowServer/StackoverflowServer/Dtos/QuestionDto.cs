@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using StackoverflowServer.Models;
 
 namespace StackoverflowServer.Dtos
 {
@@ -9,6 +10,10 @@ namespace StackoverflowServer.Dtos
     {
         public long Id { get; set; }
 
-        public string QuestionName { get; set; }
+        public string QuestionTitle { get; set; }
+
+        public string QuestionDetail { get; set; }
+
+        public ICollection<Answer> Answers { get; set; }
     }
 }

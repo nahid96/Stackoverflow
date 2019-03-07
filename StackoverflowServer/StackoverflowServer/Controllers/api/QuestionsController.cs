@@ -32,7 +32,11 @@ namespace StackoverflowServer.Controllers.api
         [System.Web.Http.Route("api/GetQuestion/{id}")]
         public IHttpActionResult GetQuestion(long id)
         {
-            Question questionInDb = _context.Questions.SingleOrDefault(q => q.Id == id);
+            //Question questionInDb = _context.Questions.SingleOrDefault(q => q.Id == id);
+
+            var questionInDb = (from a in _context.Questions
+                join c in _context.Answers on a.Id equals c.QuestionId
+                select new { Question = a, Answer = c });
 
             if (questionInDb == null)
                 return NotFound();
@@ -66,7 +70,7 @@ namespace StackoverflowServer.Controllers.api
             if(questionInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            //questionInDb.QuestionName = question.QuestionName;
+            //questionInDb.QuestionTitle = question.QuestionTitle;
             Mapper.Map(questionDto, questionInDb);
 
             _context.SaveChanges();
